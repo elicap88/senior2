@@ -3,10 +3,14 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { IpAddressComponent } from './components/ip-address/ip-address.component';
+import { StaticJobComponent } from './components/static-job/static-job.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    IpAddressComponent,
+    StaticJobComponent
   ],
   imports: [
     BrowserModule,
