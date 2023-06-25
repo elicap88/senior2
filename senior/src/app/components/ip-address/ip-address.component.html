@@ -1,1 +1,51 @@
-<p>ip-address works!</p>
+<main class="backgrounContainer">
+  <section class="container">
+    <header class="title">
+      {{ titles.ipAddress.titlePrincipal }}
+    </header>
+    <div class="inputContainer">
+      <input type="text" [(ngModel)]="ip" />
+      <mat-icon
+        svgIcon="searchIcon"
+        class="searchIcon"
+        (click)="getIpAddress()"
+      ></mat-icon>
+    </div>
+    <div class="cardContainer">
+      <div class="cardContainerItem">
+        <header class="cardContainerTitle">
+          {{ titles.ipAddress.idAddress }}
+        </header>
+        <p class="cardContainerContent">{{ address?.ip }}</p>
+      </div>
+      <span class="lineSpacer"></span>
+      <div class="cardContainerItem">
+        <header class="cardContainerTitle">
+          {{ titles.ipAddress.location }}
+        </header>
+        <p class="cardContainerContent">
+          {{ address?.location?.city }} {{ address?.location?.country }}
+          {{ address?.location?.postalCode }}
+        </p>
+      </div>
+      <span class="lineSpacer"></span>
+      <div class="cardContainerItem">
+        <header class="cardContainerTitle">
+          {{ titles.ipAddress.timezone }}
+        </header>
+        <p class="cardContainerContent">{{ timeZone }}</p>
+      </div>
+      <span class="lineSpacer"></span>
+      <div class="cardContainerItem">
+        <header class="cardContainerTitle">{{ titles.ipAddress.isp }}</header>
+        <div>{{ timeZone }}</div>
+        <p class="cardContainerContent"></p>
+      </div>
+    </div>
+  </section>
+  <section class="map-container">
+    <div class="map-frame">
+      <div id="map"></div>
+    </div>
+  </section>
+</main>

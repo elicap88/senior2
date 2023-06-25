@@ -1,0 +1,108 @@
+:host {
+  --VeryDarkGray: hsl(0, 0%, 17%);
+  --DarkGray: hsl(0, 0%, 59%);
+}
+
+.backgrounContainer {
+  background-image: url('../../../assets/ip-address-tracker-master/images/pattern-bg.png');
+  background-size: cover;
+  height: 15rem;
+
+  & .container {
+    width: 80%;
+    margin: auto;
+    display: grid;
+    gap: 2rem;
+
+    & .title {
+      display: flex;
+      justify-content: center;
+      color: #fff;
+      margin-top: 3rem;
+    }
+
+    & .inputContainer {
+      margin: auto;
+      width: 50%;
+      display: flex;
+
+      & input[type='text'] {
+        border: none;
+        padding: 1rem;
+        width: 100%;
+        border-radius: 0.5rem 0 0 0.5rem;
+        -webkit-border-radius: 0.5rem 0 0 0.5rem;
+        -moz-border-radius: 0.5rem 0 0 0.5rem;
+        -ms-border-radius: 0.5rem 0 0 0.5rem;
+        -o-border-radius: 0.5rem 0 0 0.5rem;
+        font-size: 18px;
+      }
+
+      & .searchIcon {
+        background-color: var(--VeryDarkGray);
+        padding: 0.9rem;
+        border-radius: 0 0.5rem 0.5rem 0;
+      }
+    }
+  }
+  & .map-container {
+    position: absolute;
+    top: 15rem;
+    left: 0;
+    right: 0;
+    bottom: 0;
+
+    & .map-frame {
+      border: 2px solid black;
+      height: 100%;
+
+      & #map {
+        height: 100%;
+      }
+    }
+  }
+
+  & .cardContainer {
+    background-color: #fff;
+    padding: 2rem;
+    display: grid;
+    grid-template-columns: 1fr 1px 1fr 1px 1fr 1px 1fr;
+    gap: 1rem;
+    border-radius: 0.5rem;
+    -webkit-border-radius: 0.5rem;
+    -moz-border-radius: 0.5rem;
+    -ms-border-radius: 0.5rem;
+    -o-border-radius: 0.5rem;
+    z-index: 999;
+
+    & .cardContainerItem {
+      display: flex;
+      flex-flow: column;
+      gap: 0.5rem;
+      & .cardContainerTitle {
+        font-size: 10px;
+        color: var(--DarkGray);
+        font-weight: bold;
+      }
+    }
+
+    & .lineSpacer {
+      background-color: var(--DarkGray);
+    }
+  }
+}
+
+@media (max-width: 1080px) {
+  .cardContainer {
+    & div {
+      grid-column: span 7;
+    }
+    & .lineSpacer {
+      display: none;
+    }
+  }
+
+  .inputContainer {
+    width: 100% !important;
+  }
+}
