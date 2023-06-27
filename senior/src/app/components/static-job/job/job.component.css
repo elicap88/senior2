@@ -74,25 +74,30 @@
       height: 1px;
     }
 
-    & .devCardOptions {
+    & .devCardOptionContainer {
       display: flex;
-      align-items: center;
-      & .options {
-        background-color: #eef5f4;
-        color: #61aaa8;
-        font-weight: bold;
-        padding: 0.5rem;
-        border-radius: 4px;
-        -webkit-border-radius: 4px;
-        -moz-border-radius: 4px;
-        -ms-border-radius: 4px;
-        -o-border-radius: 4px;
-      }
+      gap: 1rem;
 
-      & .options:hover {
-        background-color: #61aaa8;
-        color: #fff;
-        cursor: pointer;
+      & .devCardOptions {
+        display: flex;
+        align-items: center;
+        & .options {
+          background-color: #eef5f4;
+          color: #61aaa8;
+          font-weight: bold;
+          padding: 0.5rem;
+          border-radius: 4px;
+          -webkit-border-radius: 4px;
+          -moz-border-radius: 4px;
+          -ms-border-radius: 4px;
+          -o-border-radius: 4px;
+        }
+
+        & .options:hover {
+          background-color: #61aaa8;
+          color: #fff;
+          cursor: pointer;
+        }
       }
     }
   }

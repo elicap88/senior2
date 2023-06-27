@@ -18,11 +18,14 @@
     margin-top: 7rem;
     padding: 1rem 2rem;
     box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+    /* display: flex; */
+    /* justify-content: space-between; */
+    /* align-items: center; */
+    display: grid;
+    grid-template-columns: 1fr 12%;
+    gap: 1rem;
 
-    & .optionList {
+    & .optionListContainer {
       display: flex;
       flex-flow: wrap;
       gap: 1rem;
@@ -66,6 +69,9 @@
 
   & .clearOption {
     color: #96a09f;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
   }
 
   & .clearOption:hover {
@@ -78,6 +84,7 @@
 @media (max-width: 1080px) {
   .optionContaiener {
     width: 80% !important;
+    flex-flow: wrap;
   }
 
   .container {

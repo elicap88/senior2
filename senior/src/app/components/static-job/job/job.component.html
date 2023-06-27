@@ -18,11 +18,13 @@
         </div>
       </div>
       <div class="divider"></div>
-      <div
-        class="devCardOptions"
-        *ngFor="let i of job.languages; let j = index"
-      >
-        <span class="options" (click)="onChange(i)"> {{ i }}</span>
+      <div class="devCardOptionContainer">
+        <div
+          class="devCardOptions"
+          *ngFor="let i of job.languages; let j = index"
+        >
+          <span class="options" (click)="onChange(i)"> {{ i }}</span>
+        </div>
       </div>
     </section>
   </article>
