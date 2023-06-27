@@ -1,0 +1,29 @@
+<main class="container">
+  <article class="devCardContainer" *ngFor="let job of jobs">
+    <section class="devCardSection">
+      <div class="devCardCircle">
+        <img [src]="job.logo" alt="" />
+      </div>
+      <div class="devCard">
+        <div class="devCardHeader">
+          <span class="devCardText">{{ job.company }}</span>
+          <span class="devCardStikerSuccess" *ngIf="job.new == true">NEW</span>
+          <span class="devCardStikerBlack" *ngIf="job.featured == true"
+            >FEATURED</span
+          >
+        </div>
+        <div class="devCardBody">{{ job.position }}</div>
+        <div class="devCardFooter">
+          {{ job.postedAt }} - {{ job.contract }} - {{ job.location }}
+        </div>
+      </div>
+      <div class="divider"></div>
+      <div
+        class="devCardOptions"
+        *ngFor="let i of job.languages; let j = index"
+      >
+        <span class="options" (click)="onChange(i)"> {{ i }}</span>
+      </div>
+    </section>
+  </article>
+</main>

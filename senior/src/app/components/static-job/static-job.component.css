@@ -1,0 +1,86 @@
+.container {
+  display: grid;
+  gap: 2rem;
+  background-image: url('../../../assets/static-job-listings-master/images/bg-header-desktop.svg');
+  background-size: cover;
+  height: 10rem;
+  background-color: #5da5a4;
+
+  & .optionContaiener {
+    background-color: #fff;
+    border-radius: 4px;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    -ms-border-radius: 4px;
+    -o-border-radius: 4px;
+    width: 60%;
+    margin: auto;
+    margin-top: 7rem;
+    padding: 1rem 2rem;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    & .optionList {
+      display: flex;
+      flex-flow: wrap;
+      gap: 1rem;
+    }
+
+    & .optionCard {
+      background-color: #f0f5f3;
+      color: #5ca3a1;
+      font-weight: bold;
+      border-radius: 4px;
+      -webkit-border-radius: 4px;
+      -moz-border-radius: 4px;
+      -ms-border-radius: 4px;
+      -o-border-radius: 4px;
+      display: flex;
+      gap: 0.5rem;
+      align-items: center;
+      justify-content: center;
+
+      & .clearButton {
+        padding: 0;
+        border: none;
+      }
+
+      & .optionCardIcon {
+        background-color: #5ba5a4;
+        border-radius: 0 4px 4px 0;
+        -webkit-border-radius: 0 4px 4px 0;
+        -moz-border-radius: 0 4px 4px 0;
+        -ms-border-radius: 0 4px 4px 0;
+        -o-border-radius: 0 4px 4px 0;
+        color: #fff;
+        cursor: pointer;
+      }
+
+      & .optionCardIcon:hover {
+        background-color: #2b393a;
+      }
+    }
+  }
+
+  & .clearOption {
+    color: #96a09f;
+  }
+
+  & .clearOption:hover {
+    color: #5ca3a1;
+    cursor: pointer;
+    font-weight: bold;
+  }
+}
+
+@media (max-width: 1080px) {
+  .optionContaiener {
+    width: 80% !important;
+  }
+
+  .container {
+    gap: 4rem;
+  }
+}

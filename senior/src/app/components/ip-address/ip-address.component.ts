@@ -14,7 +14,6 @@ import data from '../../../assets/titles.json';
 })
 export class IpAddressComponent implements OnInit, AfterViewInit {
   private map: any;
-  title: string;
   ip: string = '';
   address!: ipAddress;
   timeZone: string = '';
@@ -27,7 +26,6 @@ export class IpAddressComponent implements OnInit, AfterViewInit {
     private matIconRegistry: MatIconRegistry,
     private domSanitizer: DomSanitizer
   ) {
-    this.title = 'Ip Address Tracker';
     this.matIconRegistry.addSvgIcon(
       'searchIcon',
       this.domSanitizer.bypassSecurityTrustResourceUrl(
@@ -56,9 +54,7 @@ export class IpAddressComponent implements OnInit, AfterViewInit {
     tiles.addTo(this.map);
   }
 
-  ngOnInit(): void {
-    console.log(this.titles);
-  }
+  ngOnInit(): void {}
 
   ngAfterViewInit(): void {
     this.initMap(this.lat, this.long);

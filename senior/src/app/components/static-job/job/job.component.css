@@ -1,0 +1,130 @@
+.container {
+  display: flex;
+  flex-flow: column;
+  gap: 2rem;
+}
+
+.devCardContainer {
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  border-radius: 0.5rem;
+  -webkit-border-radius: 0.5rem;
+  -moz-border-radius: 0.5rem;
+  -ms-border-radius: 0.5rem;
+  -o-border-radius: 0.5rem;
+  border-left: 4px solid transparent;
+  width: 60%;
+  margin: auto;
+  padding: 1rem 2rem;
+
+  & .devCardSection {
+    gap: 1rem;
+    display: flex;
+
+    & .devCardCircle {
+      width: 5rem;
+      height: 5rem;
+      border-radius: 50%;
+      -webkit-border-radius: 50%;
+      -moz-border-radius: 50%;
+      -ms-border-radius: 50%;
+      -o-border-radius: 50%;
+    }
+
+    & .devCard {
+      display: flex;
+      gap: 1rem;
+      flex-flow: column;
+      font-size: 13px;
+
+      & .devCardHeader {
+        display: flex;
+        gap: 1rem;
+        align-items: center;
+
+        & .devCardStikerSuccess {
+          color: #fff;
+          background-color: #61aaa8;
+          padding: 4px;
+          border-radius: 12px;
+          -webkit-border-radius: 12px;
+          -moz-border-radius: 12px;
+          -ms-border-radius: 12px;
+          -o-border-radius: 12px;
+          height: 1rem;
+        }
+
+        & .devCardStikerBlack {
+          color: #fff;
+          background-color: #2e3b39;
+          padding: 0.5rem;
+          padding: 4px;
+          border-radius: 12px;
+          -webkit-border-radius: 12px;
+          -moz-border-radius: 12px;
+          -ms-border-radius: 12px;
+          -o-border-radius: 12px;
+          height: 1rem;
+        }
+      }
+    }
+
+    & .divider {
+      display: none;
+      background-color: #d9dbda;
+      height: 1px;
+    }
+
+    & .devCardOptions {
+      display: flex;
+      align-items: center;
+      & .options {
+        background-color: #eef5f4;
+        color: #61aaa8;
+        font-weight: bold;
+        padding: 0.5rem;
+        border-radius: 4px;
+        -webkit-border-radius: 4px;
+        -moz-border-radius: 4px;
+        -ms-border-radius: 4px;
+        -o-border-radius: 4px;
+      }
+
+      & .options:hover {
+        background-color: #61aaa8;
+        color: #fff;
+        cursor: pointer;
+      }
+    }
+  }
+}
+
+.devCardContainer:hover {
+  border-left: 4px solid #5ca4a4;
+}
+
+@media (max-width: 1080px) {
+  .container {
+    gap: 4rem;
+  }
+  .devCardContainer {
+    width: 80%;
+    position: relative;
+  }
+
+  .devCardCircle {
+    position: absolute;
+    bottom: 12rem;
+  }
+
+  .devCardSection {
+    flex-flow: column;
+  }
+
+  .devCard {
+    padding-top: 3rem;
+  }
+
+  .divider {
+    display: block !important;
+  }
+}

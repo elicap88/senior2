@@ -1,1 +1,18 @@
-<p>static-job works!</p>
+<main class="container">
+  <section class="optionContaiener">
+    <section class="optionList" *ngFor="let lang of langs; let i = index">
+      <span class="optionCard">
+        <p>{{ lang.label }}</p>
+        <button type="button" class="clearButton">
+          <mat-icon class="optionCardIcon" (click)="onChange(lang)"
+            >clear</mat-icon
+          >
+        </button>
+      </span>
+    </section>
+    <section class="clearOption" (click)="clear()">Clear</section>
+  </section>
+  <div>
+    <app-job [job]="jobs" [langs]="langs"></app-job>
+  </div>
+</main>
