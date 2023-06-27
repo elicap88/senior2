@@ -45,7 +45,11 @@ export class JobComponent implements OnInit {
     });
     this.jobs = bookFilteredList;
   }
-
+  /**
+   * Llama al servicio de filtrado
+   * al seleccionar un lenguaje
+   * @param i
+   */
   onChange(i: any) {
     const tagsSelected = i;
     this.getFilteredJobs(tagsSelected);
